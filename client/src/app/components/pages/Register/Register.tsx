@@ -1,31 +1,13 @@
 import React from 'react';
 import Form from '../../Form/Form';
 import { IRegisterProps } from './Register.model';
+import RegistrationRows from '../../../common/config/registration/registrationRows.json';
 
 const Register = (props: IRegisterProps) => (
     <Form
         message={props.message}
         title="Please Register"
-        rows={[
-            {
-                label: "UserName: ",
-                name: "username",
-                inputType: "text",
-                placeHolder: "Enter Username",
-            },
-            {
-                label: "Password: ",
-                name: "password",
-                inputType: "password",
-                placeHolder: "Enter Password",
-            },
-            {
-                label: "Role: ",
-                name: "role",
-                inputType: "text",
-                placeHolder: "Enter Role",
-            }
-        ]}
+        rows={RegistrationRows}
         onSubmit={props.onSubmit}
         onChange={props.onChange}
         buttonText={"Submit"}

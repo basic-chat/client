@@ -18,7 +18,6 @@ const LoginController = (props: any) => {
         e.preventDefault();
         AuthService.login(user).then(data => {
             const { isAuthenticated, user, message } = data;
-            console.log('tst')
             
             if(isAuthenticated) {
                 authContext.setUser(user);
@@ -27,7 +26,6 @@ const LoginController = (props: any) => {
             }
             else {
                 setMessage(message);
-
             }
         })
     }

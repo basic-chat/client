@@ -24,14 +24,13 @@ const Form = (props: IForm) => (
                 ))
             }
 
-            
-                <Button
-                    className="btn btn-lg btn-primary btn-block"
-                    type="submit"
-                >
-                    {props.buttonText}
-                </Button>
-                {props.message && <Message message={props.message} />}
+            <Button
+                className="btn btn-lg btn-primary btn-block"
+                type="submit"
+            >
+                {props.buttonText}
+            </Button>
+            {props.message && <Message message={props.message} />}
         </div>
     </form>
 )
