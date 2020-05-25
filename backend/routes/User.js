@@ -5,12 +5,13 @@ const passportConfig = require('../passport');
 const JWT = require('jsonwebtoken');
 const User = require('../models/User');
 const Todo = require('../models/Todo');
+const Secret = require('../secret');
 
 const signToken = userId => {
     return JWT.sign({
-        iss : "NoobCoder",
+        iss : Secret,
         sub : userId
-    }, "NoobCoder", {expiresIn: "1h"})
+    }, Secret, {expiresIn: "1h"})
 }
 
 userRouter.post('/register', (req, res) => {
