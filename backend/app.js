@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 app.use(cookieParser());
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/mernauth', {useUnifiedTopology: true}, () => {
+mongoose.connect('mongodb://localhost:27017/mernauth', {useUnifiedTopology: true, useNewUrlParser: true}, () => {
     console.log('successfully connected to database');
 });
 
