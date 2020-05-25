@@ -7,7 +7,7 @@ import Admin from './components/pages/Admin';
 
 import NavBar from './components/Navbar/Navbar.controller';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Todos from './components/Todos';
+import Todos from './components/Todos/Todos.controller';
 import PrivateRoute from './common/hocs/PrivateRoute';
 import UnPrivateRoute from './common/hocs/UnPrivateRoute';
 
