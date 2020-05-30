@@ -1,6 +1,6 @@
 export default {
     getTodos : () => {
-        return fetch('/user/todos').then(response => {
+        return fetch('/api/user/todos').then(response => {
             if(response.status !== 401) {
                 return response.json().then(data => data);
             }
@@ -10,7 +10,7 @@ export default {
         })
     },
     postTodo : (todo: any) => {
-        return fetch('/user/todo', {
+        return fetch('/api/user/todo', {
             method: "post",
             body: JSON.stringify(todo),
             headers: {
