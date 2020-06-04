@@ -1,0 +1,40 @@
+
+.chat-message {
+    $self: &;
+    display: flex;
+
+    &__body {
+        margin: 15px;
+        display: flex;
+        align-items: center;
+
+        #{$self}__data {
+            padding: 10px;
+            border-radius: 0px 10px 10px 10px;
+            background: #e2e2e2;
+        }
+
+        #{$self}__user {
+            margin-left: 10px;
+            color: gray;
+        }
+    }
+}
+
+.chat-message--me {
+    flex-direction: row-reverse;
+    
+    .chat-message__body {
+        flex-direction: row-reverse;
+    }
+
+    .chat-message__data {
+        border-radius: 10px 0 10px 10px;
+        background: #e0e0fb;
+    }
+
+    .chat-message__user {
+        margin-right: 10px;
+    }
+
+}

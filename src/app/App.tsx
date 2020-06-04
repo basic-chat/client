@@ -12,6 +12,8 @@ import PrivateRoute from './common/hocs/PrivateRoute';
 import UnPrivateRoute from './common/hocs/UnPrivateRoute';
 
 import './App.scss';
+import Chat from './components/Chat/Chat';
+import Join from './components/Join';
 
 function App() {
   return (
@@ -19,11 +21,11 @@ function App() {
       <Router>
         <NavBar />
         
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Join} />
         <UnPrivateRoute path="/login" component={Login} />
         <UnPrivateRoute path="/Register" component={Register} />
         <PrivateRoute path="/admin" roles={["admin"]} component={Admin} />
-        <PrivateRoute path="/todos" roles={["user", "admin"]} component={Todos} />
+        <PrivateRoute path="/todos" roles={["user", "admin"]} component={Chat} />
 
       </Router>
     </div>
