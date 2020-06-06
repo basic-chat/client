@@ -22,7 +22,7 @@ const LoginController = (props: any) => {
             if(isAuthenticated) {
                 authContext.setUser(user);
                 authContext.setIsAuthenticated(isAuthenticated);
-                props.history.push('/todos');
+                props.history.push('/chat');
             }
             else {
                 setMessage(message);

@@ -5,8 +5,8 @@
         "role": ""
     },
     {
-        "path": "/todos",
-        "label": "Todos",
+        "path": "/chat",
+        "label": "Chat",
         "role": ""
     },
     {

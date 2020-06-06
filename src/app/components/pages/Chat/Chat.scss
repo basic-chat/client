@@ -1,0 +1,24 @@
+.chat {
+    $self: &;
+
+    &__messages-container {
+        margin-top: 20px;
+        height: 500px;
+        width: 100%;
+        background:#f8f8f8; 
+        overflow-y: auto;
+    }
+
+    &__input-container {
+        display: flex;
+        margin-top: 10px;
+
+        #{$self}__input {
+            width: 100%;
+        }
+
+        #{$self}__button {
+            height: 55px;
+        }
+    }
+}

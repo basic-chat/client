@@ -4,7 +4,6 @@ import './ChatMessage.scss';
 import { Typography } from 'rmwc';
 
 const ChatMessage = (props: any) => {
-
     return (
         <div className={`chat-message ${props.isMe ? "chat-message--me" : ''}`}>
             <div className="chat-message__body">
